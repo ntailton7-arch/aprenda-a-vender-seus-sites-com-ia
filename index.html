@@ -207,6 +207,7 @@ dialog .vw{position:relative;height:300px;margin:10px 0 18px}dialog .lap{animati
 <div class="pr gt">R$ 4,99</div>
 <ul><li>Acesso ao material digital</li><li>Conteúdo organizado por etapas</li><li>Orientações práticas</li><li>Estratégias de apresentação comercial</li><li>Acesso ao conteúdo após confirmação do pagamento</li></ul>
 <a class="btn" data-buy>QUERO GARANTIR MEU ACESSO</a>
+<p class="nt"><a id="alt" href="https://kiwify.app/TtVft9U" target="_blank" rel="noopener" style="color:var(--cy)">Problemas com o botão? Acesse por este link alternativo.</a></p>
 <p class="nt">Resultados dependem de esforço, nicho e região. Não há promessa de ganhos garantidos.</p>
 </div>
 </div>
@@ -235,8 +236,10 @@ dialog .vw{position:relative;height:300px;margin:10px 0 18px}dialog .lap{animati
 <dialog id="dg" aria-label="Projeto de demonstração"><h3 id="dt"></h3><div class="vw" id="dv"></div><p>Demonstração ilustrativa criada para mostrar o que é possível com IA. Não representa cliente real nem resultado.</p><button class="btn o" id="dc">Fechar</button></dialog>
 
 <script>
-// Cole aqui o link de checkout da Kiwify. Enquanto vazio, os botões rolam até a oferta.
-var CHECKOUT="";
+// Link de checkout da Kiwify (todos os botões de compra usam este link).
+var CHECKOUT="https://pay.kiwify.com.br/SQEDdDB";
+// Link alternativo da Kiwify (exibido abaixo do botão da oferta).
+var CHECKOUT_ALT="https://kiwify.app/TtVft9U";
 var $=function(s){return document.querySelector(s)},$$=function(s){return document.querySelectorAll(s)};
 $$('[data-buy]').forEach(function(a){a.href=CHECKOUT||'#oferta';if(CHECKOUT){a.target='_blank';a.rel='noopener'}});
 var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
